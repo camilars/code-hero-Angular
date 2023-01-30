@@ -1,3 +1,4 @@
+@import '../../../scss/variables.scss';
 
 .header {
   width: 100%;
@@ -5,10 +6,66 @@
   top: 0;
   left: 0;
   z-index: 100;
+  background-color: $container-color;
+  padding: 1rem 1.5rem;
 
-  .nav {
+  .container {
     max-width: 768px;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .header__logo {
+    width: 96px;
+  }
+
+  .header__info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: $body-font-alt;
+
+    div {
+      text-align: end;
+      font-size: $smaller-font-size;
+
+      p {
+        font-weight: bold;
+      }
+    }
+
+    a {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      background-color: $first-color-lighter;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $text-color;
+      font-weight: bold;
+
+      &:hover {
+        background-color: $text-color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .header {
+    .container {
+      max-width: 1200px;
+    }
+
+    .header__info {
+      div {
+        display: flex;
+        gap: 3px;
+      }
+    }
   }
 }
 

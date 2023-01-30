@@ -1,0 +1,19 @@
+<app-header [name]="'Camila Silva'" [description]="'Teste de Front-end'" [imgLogo]="'assets/img/logo.png'" [link]="'https://github.com/camilars/code-hero-Angular'"></app-header>
+
+<main class="main">
+  <h1 class="main__title">Busca de personagens</h1>
+
+  <app-search (searchTextChanged)="onSearchTextChanged($event)"></app-search>
+
+  <div class="section">
+    <div class="cards" *ngFor="let item of characters">
+      <app-character-card [name]="item.name" [description]="item.description" [path]="item.thumbnail.path" [extension]="item.thumbnail.extension" [comics]="item.comics.items" [series]="item.series.items" class="mb" *ngIf="searchText === '' || item.name.toLowerCase().includes(searchText)"></app-character-card>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <app-pagination [maxSize]="maxSize" [collectionSize]="totalResults" [(page)]="page" [pageSize]="pageSize" (pageChange)="pageChange($event)"></app-pagination>
+  </div>
+</main>
+
+

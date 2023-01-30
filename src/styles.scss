@@ -1,39 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 @import './scss/variables.scss';
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+
+:root{
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0 0 $header-height 0;
+    font-family: $body-font;
+    background-color: $body-color;
+    color: $text-color;
+  }
+
+  h1, h2, h3, h4 {
+    color: $text-color;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-body {
-  margin: 0 0 $header-height 0;
-  font-family: $body-font;
-  font-size: $normal-font-size;
-  background-color: $body-color;
-  color: $text-color;
-}
 
-h1, h2, h3, h4 {
-  color: $text-color;
-  font-weight: bold;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

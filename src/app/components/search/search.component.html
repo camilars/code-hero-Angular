@@ -1,0 +1,8 @@
+<form action="">
+  <label for="">Nome do personagem</label>
+  <div class="form__input">
+    <input type="text" placeholder="Search" id="name" name="name"
+    [(ngModel)]="searchValue" (input)="onSearchTextChanged()">
+    <img src="assets/img/search.svg">
+  </div>
+</form>

@@ -1,0 +1,62 @@
+<div class="card">
+  <div class="card__header">
+    <div class="card__title">
+      <div class="card__img">
+        <img [src]="img" alt="">
+      </div>
+      <h3 class="card__name">{{name}}</h3>
+    </div>
+
+    <div class="card__container-large">
+      <div class="card__details">
+        <p class="card__details-title">Descrição</p>
+        <p>{{description}}</p>
+      </div>
+
+      <div class="section">
+        <div class="card__details">
+          <p class="card__details-title">Comics</p>
+          <ul class="card__details-list" *ngFor="let item of comics">
+            <li class="card__details-item">{{item.name}}</li>
+          </ul>
+        </div>
+
+        <div class="card__details">
+          <p class="card__details-title">series</p>
+          <ul class="card__details-list" *ngFor="let item of series">
+            <li class="card__details-item">{{item.name}}</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <button type="button" class="card__btn" (click)="isCollapsed = ! isCollapsed; opened = ! opened" [attr.aria-expanded]="!isCollapsed" aria-controls="ngbCollapse" ng>
+      <p [ngClass]="{'open': opened}"><i class="uil uil-angle-down"></i> </p>
+    </button>
+  </div>
+
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse">
+    <div class="card__container">
+      <div class="card__details">
+        <p class="card__details-title">Descrição</p>
+        <p>Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's a teammate! Transformed by a Gamma energy explosion, A-Bomb's thick, armored skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a giant bowling ball of destruction!</p>
+      </div>
+      <div class="card__details">
+        <p class="card__details-title">Comics</p>
+        <ul class="card__details-list" *ngFor="let item of comics">
+          <li class="card__details-item">{{item.name}}</li>
+        </ul>
+      </div>
+
+      <div class="card__details">
+        <p class="card__details-title">series</p>
+        <ul class="card__details-list" *ngFor="let item of comics">
+          <li class="card__details-item">{{item.name}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+

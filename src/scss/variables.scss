@@ -13,12 +13,14 @@ $body-font: 'PT Sans', sans-serif;
 $body-font-alt: 'PT Sans Caption', sans-serif;
 
 /* .75rem = 12px, 0.875rem = 14px, 0.938rem = 15px, 1rem = 16px, 1.5rem = 24px, 2rem = 32px ... */
+
 $h1-font-size: 1.5rem;
 $h2-font-size: 1rem;
 $h3-font-size: 0.938rem;
 $normal-font-size: 0.875rem;
 $small-font-size: .813rem;
 $smaller-font-size: .75rem;
+
 
 /*========== Margenes Bottom ==========*/
 /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
@@ -38,13 +40,11 @@ $z-modal: 1000;
 
 
 /* Font size for large devices */
-@media screen and (min-width: 968px) {
-  :root {
+@media screen and (min-width: 992px) {
     $h1-font-size: 2rem;
     $h2-font-size: 1rem;
     $h3-font-size: 0.938rem;
     $normal-font-size: 0.875rem;
     $small-font-size: .813rem;
     $smaller-font-size: .75rem;
-  }
 }

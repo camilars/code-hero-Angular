@@ -1,0 +1,69 @@
+::ng-deep .pagination {
+  justify-content: center;
+  --bs-pagination-bg: #F5F5F5;
+}
+
+::ng-deep .page-item {
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  margin-right: 8px;
+  --bs-pagination-font-size: 14px;
+  --bs-pagination-hover-color: #fff;
+  --bs-pagination-hover-bg: hsl(204, 52%, 74%);
+  --bs-pagination-border-color: #E5E5E5;
+
+}
+
+::ng-deep .page-item:nth-child(-n + 2),
+::ng-deep .page-item:nth-last-child(-n + 2) {
+  width: 32px;
+  height: 32px;
+  --bs-pagination-border-width: 0;
+  --bs-pagination-bg: #fff;
+
+  &:hover {
+    --bs-pagination-hover-bg: none;
+    --bs-pagination-hover-color: hsl(204, 52%, 74%);
+  }
+
+  .page-link {
+    span {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
+
+
+::ng-deep .page-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555555;
+  --bs-pagination-border-radius: 4px;
+
+
+  &:not(:nth-last-child(-n+2)) {
+    &:hover {
+      --bs-pagination-hover-bg: hsl(204, 52%, 74%);
+    }
+  }
+}
+
+::ng-deep .page-item.active .page-link {
+  background-color: #167ABC;
+  border-color: #167ABC;
+}
+
+
+@media screen and (min-width: 992px) {
+
+  ::ng-deep .page-item {
+    margin-left: 16px;
+    margin-right: 16px;
+    --bs-pagination-font-size: 16px;
+  }
+}

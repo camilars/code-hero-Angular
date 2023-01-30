@@ -1,10 +1,14 @@
 <header class="header">
-  <nav class="nav">
-    <img src="assets/img/logo.png" alt="logo" />
-    <div class="header__info">
-      <p class="header__name">Camila Rose</p>
-      <span class="header__description">Teste de Front-end</span>
+  <div class="container">
+    <div class="header__logo">
+      <a href="" routerLink="/home"><img [src]="imgLogo" alt=""></a>
     </div>
-    <a href="https://github.com/camilars/code-hero-Angular" class="btn">CB</a>
-  </nav>
+    <div class="header__info">
+      <div>
+        <p class="header__name">{{name}}</p>
+        <span class="header__description">{{description}}</span>
+      </div>
+      <a [href]="link" target="_blank">CB</a>
+    </div>
+  </div>
 </header>
